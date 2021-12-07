@@ -1,0 +1,16 @@
+@media (min-width: 400px){
+    background: blue;
+  }
+  
+  #welcome-section {
+    height: 100vh;
+    background: red;
+  }
+  
+  #navbar {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+  }
