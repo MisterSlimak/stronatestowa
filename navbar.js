@@ -7,8 +7,8 @@ class myNavbarJs extends HTMLElement {
                     <a id="navbar-link" href="#projects">projects</a>
                 </div>
             </nav>
-        `
+        `;
     }
 }
 
-customElements.define('myNavbar', myNavbarJs)
+customElements.define('myNavbarS', myNavbarJs)
