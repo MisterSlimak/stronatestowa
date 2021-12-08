@@ -1,13 +1,87 @@
+:root{
+    --navbar-height: 10vh;
+    --navbar-font-size: 20px;
+    --navbar-button-color: blue;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 
-  #welcome-section {
-    height: 100vh;
-    background: red;
+#navbar-link {
+    background-color: var(--navbar-button-color);
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
   }
-  
-  #navbar {
+
+#navbar-link:hover, a:active {
+    opacity: 0.5;
+    
+  }
+.navbar {
     display: flex;
     position: fixed;
-    justify-content: flex-end;
+    justify-content: flex-start;
     top: 0;
     left: 0;
-  }
+    width: 100vw;
+    height: var(--navbar-height);
+    background-color: blue;
+    
+    
+    
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    font-size: var(--navbar-font-size);
+    align-items: center;
+    color: black;
+    
+}
+
+  .container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-padding: 100px;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+}
+
+
+
+#welcome-section {
+    background: red;
+}
+  
+#projects {
+    background: orange;
+}
+
+.project-grid {
+    display: grid;
+    background-color: green;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+    grid-gap: 10px 10px;
+
+}
+
+.status-bar {
+    display:flex;
+}
