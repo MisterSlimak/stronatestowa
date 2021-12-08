@@ -12,3 +12,4 @@ class myNavbarJs extends HTMLElement {
 }
 
 customElements.define('myNavbarS', myNavbarJs)
+if (!customElements.get('myNavbarS')) { customElements.define('myNavbarS', HTMLTheElement); }
