@@ -71,16 +71,17 @@ section {
 .project-grid {
     display: flex;
     background-color: green;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
+    width: 100vw;
+    margin: 100px;
 }
 
     .project-image{
         height: 200px;
         width: 200px;
     
-        background-image: url('https://media.istockphoto.com/photos/european-short-haired-cat-picture-id1072769156?k=20&m=1072769156&s=612x612&w=0&h=k6eFXtE7bpEmR2ns5p3qe_KYh098CVLMz4iKm5OuO6Y=');
+        background-image: url("img/skaczacy napis.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -88,7 +89,7 @@ section {
 
     .project-tile {
         display: flex;
-        background-color: skyblue;
+        background-color: rgba(135,206,235,0.7);
         border-radius: 25px;
         padding: 20px 20px 20px 20px;
         flex-direction: column;
