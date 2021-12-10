@@ -56,25 +56,28 @@ section {
     scroll-snap-align: start;
 }
 
-
+h1 {
+    padding: 0 35% 0 0;
+}
 
 #welcome-section {
     height: 100vh;
-    background: red;
+    background-image: url("img/background0.jpg");
     
     
 }
   
 #projects {
-    
-    background: orange;
+    background-image: url("img/background9.jpg");
     min-height: 100vh;
 }
 
 .project-grid {
     display: flex;
     flex-wrap: wrap;
+    /*
     background-color: green;
+    */
     justify-content: space-around;
     align-items: center;
     width: 100vw;
@@ -92,7 +95,7 @@ section {
     padding: 20px 20px 20px 20px;
     flex-direction: column;
     min-width: 220px;
-    min-height: 440px;
+    min-height: 480px;
     margin: 10px;
     max-width: 330px;
 }
@@ -115,10 +118,12 @@ section {
 }
 
 .status-bar {
+    margin-top: auto;
     display:flex;
     font-weight: bold;
     color: rgba(1, 128, 0, 100);
-    padding: 10px 0px 20px 10px;
+    padding: 10px 0px 20px 0px;
+    justify-content: center;
 }
 
 .status {
@@ -130,7 +135,7 @@ section {
 }
 
 .project-link {
-    margin-top: auto;
+    
 }
 
 .project-button {
@@ -190,6 +195,66 @@ section {
         font-size: 1.0rem;
     }
 }
+
+
+.project-button-afk {
+    background-color: #ffee00;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.project-button-afk:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: calc(100% + 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    bottom: 48%;
+    transform: rotate(14deg);
+}
+.project-button-afk:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: calc(100% + 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    bottom: 48%;
+    transform: rotate(-14deg);
+}
+@media (min-width: 768px) {
+    .project-button-afk {
+        padding: .75rem 1rem 1.25rem 1rem;
+        font-size: 1.0rem;
+    }
+}
+
 
 #contact {
 height: 100vh;
