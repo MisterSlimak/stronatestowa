@@ -11,32 +11,39 @@
     
     
 </head>
-<script type=module src="navbar.js"></script>
 <body>
    
-  <myNavbarS></myNavbarS>
+  <nav class="navbar">
+    <ul>
+        <li><a href="#welcome-section">Strona główna</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
   
   
     
   <main>
-    <div class="container">
+    <div class="container-smooth-scroll">
       <section id="welcome-section">
     
         <h1>
-          x
+          Witam w moim portfolio
         </h1>
       </section>
     
       <section id="projects">
         <div class="project-grid">
           <div class="project-tile">
+            <div class="project-image"></div>
             <div class="project-title" id="project 1">
               tytuł projektu
             </div>
-              <div class="status-bar">
-                <div class="status">Status:</div> 
-                <div class="status-info">100%</div>
-             </div>
+            <div class="project-opis">opis projektu</div>
+            <div class="status-bar">
+              <div class="status">Status:</div> 
+              <div class="status-info">100%</div>
+            </div>
             <a href="/stronatestowa/proj1-skaczacy-napis.html" id="profile-link" > link do projektu</a>
           </div>
           <div class="project-tile">
@@ -73,6 +80,12 @@
 
       </section>
 
+      <section id="contact">
+    
+        <h1>
+          kontakt
+        </h1>
+      </section>
       
     </div>
 
