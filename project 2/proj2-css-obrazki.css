@@ -51,7 +51,7 @@ body {
 
 
 
-#pic1 {
+.pic {
     width: 300px;
     height: 300px;
     display: flex;
@@ -60,14 +60,9 @@ body {
     background: #243D83;
 }
 
-#pic2 {
-    width: 300px;
-    height: 300px;
-    background: #243D83;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
+
 
 /* pic 1*/
 
@@ -77,6 +72,8 @@ body {
     border-radius: 50%;
     position: relative;
 }
+
+
 
 #yellow {
     width: 50px;
@@ -218,3 +215,33 @@ body {
     top: 15px;
    transform: rotate(0.5turn);
 }
+
+
+/* pic 3 */
+
+.circle {
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #FFF1C1;
+    overflow: hidden;
+  }
+  .montain {
+    position: relative;
+    height: 145px;
+    width: 145px;
+    top: 90px;
+    left: 70px;
+    transform: rotate(45deg);
+    background-color: #FE5F55;
+  }
+  .montain:after {
+    content: "";
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    top: 130px;
+    right: 30px;
+    background-color: #FE5F55;
+  }

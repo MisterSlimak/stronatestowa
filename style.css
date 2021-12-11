@@ -82,7 +82,9 @@ h1 {
     align-items: center;
     width: 100vw;
     margin: 100px;
+   
 }
+
 
 .project-grid > * {
     flex: 1 1 220px; 
