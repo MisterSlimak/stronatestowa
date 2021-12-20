@@ -12,7 +12,6 @@
 
 
 
-
 .navbar {
     position: fixed;
     top: 0;
@@ -227,16 +226,21 @@ h1::after {
 .background {
     height: 120%;
     width: 100%;
-    
-    
     background-size: cover;
     position: absolute;
     top: 0px;
+    left: 0px;
     z-index: 1;
 }
 
 .b1 {
     background-image: url("img/proj1.png");
+}
+.b2 {
+    background-image: url("img/proj2.png");
+}
+.b3 {
+    background-image: url("img/proj3.png");
 }
 
 .background::after {
