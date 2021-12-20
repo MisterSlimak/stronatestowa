@@ -10,12 +10,7 @@
     padding: 0px;
 }
 
-body {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: 200vh;
-}
+
 
 
 .navbar {
@@ -180,7 +175,7 @@ h1::after {
     align-content: space-between;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px 10px;
-    position: absolute;
+    position: flex;
     top: 100px;
 }
 
@@ -232,6 +227,8 @@ h1::after {
 .background {
     height: 120%;
     width: 100%;
+    
+    
     background-size: cover;
     position: absolute;
     top: 0px;
