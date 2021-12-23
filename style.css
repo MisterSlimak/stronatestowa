@@ -1,5 +1,5 @@
 :root{
-    --typewriterSpeed: 4s;
+    --typewriterSpeed: 3s;
     --typewriterCharacters: 22;
 }
 *, *::after, *::before {
@@ -257,6 +257,9 @@ h1::after {
 }
 .b3 {
     background-image: url("img/proj3.png");
+}
+.b4 {
+    background-image: url("img/proj4.png");
 }
 
 .background::after {
