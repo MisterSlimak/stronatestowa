@@ -261,6 +261,9 @@ h1::after {
 .b4 {
     background-image: url("img/proj4.png");
 }
+.b5 {
+    background-image: url("img/proj5.png");
+}
 
 .background::after {
     content: "";

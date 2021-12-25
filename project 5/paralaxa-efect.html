@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="paralaxa-efect.css">
+</head>
+<body>
+    
+  <nav class="navbar">
+    <ul>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#welcome-section">Strona główna</a></li>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#projects">Projekty</a></li>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <section class="zoom">
+    <img src="img/m1.png" alt="" id="layer1">
+    <img src="img/m2.png" alt="" id="layer2">
+    <img src="img/m9.png" alt="" id="layer3">
+    <img src="img/m11.png" alt="" id="layer4">
+    <h1 id="layer5">
+      paralaxa efect
+    </h1>
+    
+  </section>
+
+  <script type="text/javascript">
+
+    var layer1 = document.getElementById("layer1")
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+      function (e) {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer1.style.width = (100 + scroll/4) + '%';
+      }
+    )
+
+    var layer2 = document.getElementById("layer2")
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+      function (e) {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer2.style.width = (100 + scroll/5) + '%';
+      }
+    )
+
+    var layer3 = document.getElementById("layer3")
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+      function (e) {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer3.style.width = (100 + scroll/6) + '%';
+      }
+    )
+
+    var layer4 = document.getElementById("layer4")
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+      function (e) {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer4.style.width = (100 + scroll/7) + '%';
+      }
+    )
+
+    var layer5 = document.getElementById("layer5")
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+      function (e) {
+      var offset = window.pageYOffset;
+      scroll = offset;
+      layer5.style.height = (100 + scroll/32) + '%';
+      }
+    )
+
+  </script>
+
+  <section class="s2">
+
+  </section>
+
+</body>
+</html>
