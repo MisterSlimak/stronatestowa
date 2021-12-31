@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="neon-letters.css">
+  </head>
+  <body>
+      
+    <nav class="navbar">
+      <ul>
+        <li><a href="https://misterslimak.github.io/stronatestowa/#welcome-section">Strona główna</a></li>
+        <li><a href="https://misterslimak.github.io/stronatestowa/#projects">Projekty</a></li>
+        <li><a href="https://misterslimak.github.io/stronatestowa/#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    
+    <div class="neonContainer">
+      <div class="neonLetters">
+        <p data-text="Ładny neonik">
+          Ładny&nbspneonik
+        </p>
+      </div>
+      <div class="switchContainer">
+        <p>
+          Wybierz kolor neonka
+        </p>
+        <label>
+          <input type="radio" name="x" id="check1" onclick="functionNeon()" checked>
+          <span></span>
+          <h1>
+            Różowy
+          </h1>
+        </label>
+        <label>
+          <input type="radio" name="x" id="check2" onclick="functionNeon()">
+          <span></span>
+          <h1>
+            Czerwony
+          </h1>
+        </label>
+        <label>
+          <input type="radio" name="x" id="check3" onclick="functionNeon()">
+          <span></span>
+          <h1>
+            Żółty
+          </h1>
+        </label>
+      </div>
+    </div>
+  <script>
+    
+    function functionNeon() {
+      var checkBox1 = document.getElementById("check1");
+      var checkBox2 = document.getElementById("check2");
+      var checkBox3 = document.getElementById("check3");
+      var color = document.querySelector(':root');
+
+      if (checkBox1.checked == true){
+        color.style.setProperty("--colorGlobal", "255,0,91");
+      } else if (checkBox2.checked == true){
+        color.style.setProperty("--colorGlobal", "255,0,0");
+      } else if (checkBox3.checked == true){
+        color.style.setProperty("--colorGlobal", "255,255,0");
+      }
+    }
+
+  </script>
+  </body>
+</html>

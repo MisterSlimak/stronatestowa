@@ -1,0 +1,170 @@
+:root {
+    --colorGlobal:255,0,91;
+}
+
+body {
+    background: #6CB3A9;
+    padding: 60px 0 0 0;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: skyblue;
+}
+
+.neonContainer {
+    height: 100vh;
+    width: 100vw;
+    background: yellow;
+}
+
+.neonContainer .neonLetters {
+    position: relative;
+    left: 25vw;
+    top: 25vh;
+    height: 50vh;
+    width: 70vw;
+    background: black;
+    
+}
+
+.neonContainer .neonLetters p {
+    font-size: 5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Quicksand', sans-serif;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(var(--colorGlobal),1);
+
+}
+
+.neonContainer .neonLetters p::after {
+    content: attr(data-text);
+    padding: 0 20px;
+    z-index: -1;
+    color: rgba(var(--colorGlobal),1);
+    filter: blur(15px);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.neonContainer .neonLetters p::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--colorGlobal),0.5);
+    z-index: -2;
+    filter: blur(50px);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.neonContainer .switchContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-height: 1vh;
+    width: 15vw;
+    background: blue;
+    left: 5vw;
+    top: 15vh;
+    
+}
+
+
+.neonContainer .switchContainer p {
+    position: relative;
+    margin: 30px 15px 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.neonContainer .switchContainer label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 20px;
+}
+
+.neonContainer .switchContainer label input {
+    appearance: none;
+    display: none;
+}
+
+.neonContainer .switchContainer label span {
+    position: relative;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    background: grey;
+}
+
+.neonContainer .switchContainer label h1 {
+    position: relative;
+    font-size: 20px;
+    padding: 0 0 0 15px;
+}
+
+.neonContainer .switchContainer label:last-child{
+    padding: 0 0 10px 0;
+}
+
+
+.neonContainer .switchContainer label input:checked ~ span {
+    background: rgba(var(--colorGlobal),1);
+}
+
+.neonContainer .switchContainer label input:active {
+    transition: all 250ms ease;
+    position: relative;
+    top: 5px;
+}

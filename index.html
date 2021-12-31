@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
+    <!-- font do greetinga -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
 
@@ -20,7 +21,7 @@
     
     
 </head>
-<body>
+<body onload="js_OnScroll()" onscroll="js_OnScroll()" onresize="js_OnScroll()" class="off">
    
   <nav class="navbar">
     <ul>
@@ -32,22 +33,90 @@
   
   
     
-  <main>
-    <div class="container-smooth-scroll">
+    <main>
+      
+      <div id="dark"></div>
       <section id="welcome-section">
-        <div class="greetingbox">
-          <h1>
+        
+          <!-- <div id="box"></div>
+          <div id="boxClick"></div> -->
+          <div id="arrowContainer">
+              <div class="arrow">
+                  <div class="curveBox">
+                      <div class="curve"></div>
+                  </div>
+                  <div class="point"></div>
+              </div>
+              <p id="arrowText">
+                  Ciemno tu. Włącz światło
+              </p>
+          </div>
+
+        <div class="ContainerLight">
+            <div class="light" id="light">
+                <div class="bulb"></div>
+                <div class="wire"></div>
+            </div>
+            <div class="lightBackground" id="lightBackground"></div>
+            <div class="switch">
+                <div class="button"></div>
+            </div>
+            <div class="switchClick" onclick="js_OnScroll()" ></div>
+            <audio id="audio" src="click.mp3" autostart="false"></audio>
+        </div>
+
+        <div class="text" id="text">
+            :)
+            <div class="textShadow" id="text1Shadow">
+              :)
+            </div>
+        </div>
+
+        <div class="text" id="text2">
+            ^ ^
+            <div class="textShadow" id="text2Shadow">
+              ^ ^
+            </div>
+        </div>
+        <div class="text" id="text3">
+            UwU
+            <div class="textShadow" id="text3Shadow">
+              UwU
+            </div>
+        </div>
+
+        
+        <h1  id="text4">
             Cześć, jestem Krzysiek
-          </h1>
-          <p class="subtitle">Witam na mojej stronie :)</p>
-       </div>
+            <div class="textShadow" id="text4Shadow">
+                Cześć, jestem Krzysiek
+            </div>
+        </h1>
+        
+        <div class="subtitle" id="text5">
+            Witam na mojej stronie :)
+            <div class="textShadow" id="text5Shadow">
+                Witam na mojej stronie :)
+            </div>
+        </div>
+        
+
+
+        
       </section>
-    
+
       <section id="projects">
-        
-        
+        <!-- <div class="container containerClick">
+          <div class="card cardClick" id="cardClick1"></div>
+          <div class="card cardClick" id="cardClick2"></div>
+          <div class="card cardClick"></div>
+          <div class="card cardClick"></div>
+          <div class="card cardClick"></div>
+          <div class="card cardClick"></div>
+          <div class="card cardClick"></div>
+        </div> -->
         <div class="container">
-          <div class="card">
+          <div class="card" id="card1">
               <div class="background b1"></div>
               <div class="content">
                   <div class="title">Napis skaczący po obracającej się kostce</div>
@@ -81,24 +150,9 @@
                 </div>
             </div>
           </div>
+          
           <div class="card">
             <div class="background b3"></div>
-            <div class="content">
-                <div class="title">Poprzednia wersja zestawienia projektów</div>
-                <div class="status done">Status: 100%</div>
-                <div class="descr">
-                  #HTML <br>
-                  #CSS <br>
-                </div>
-                <div class="buttonBox">
-                  <a href="/stronatestowa/project 3/stary-podlad-projektow.html"> 
-                    <button class="button" role="button">Naciśnij aby zobaczyć</button>
-                  </a>
-                </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="background b4"></div>
             <div class="content">
                 <div class="title">Animowany tekstowy papieros</div>
                 <div class="status done">Status: 100%</div>
@@ -109,14 +163,14 @@
                   #animations <br>
                 </div>
                 <div class="buttonBox">
-                  <a href="/stronatestowa/project 4/cigarete.html"> 
+                  <a href="/stronatestowa/project 3/cigarete.html"> 
                     <button class="button" role="button">Naciśnij aby zobaczyć</button>
                   </a>
                 </div>
             </div>
           </div>
           <div class="card">
-            <div class="background b5"></div>
+            <div class="background b4"></div>
             <div class="content">
                 <div class="title">Efekt paralaxy</div>
                 <div class="status done">Status: 100%</div>
@@ -126,7 +180,24 @@
                   #JavaScript <br>
                 </div>
                 <div class="buttonBox">
-                  <a href="/stronatestowa/project 5/paralaxa-efect.html"> 
+                  <a href="/stronatestowa/project 4/paralaxa-efect.html"> 
+                    <button class="button" role="button">Naciśnij aby zobaczyć</button>
+                  </a>
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="background b5"></div>
+            <div class="content">
+                <div class="title">Różnokolorowe neonowe Litery</div>
+                <div class="status inprogress">Status: 50%</div>
+                <div class="descr">
+                  #HTML <br>
+                  #CSS <br>
+                  #JavaScript <br>
+                </div>
+                <div class="buttonBox">
+                  <a href="/stronatestowa/project 5/neon-letters.html"> 
                     <button class="button" role="button">Naciśnij aby zobaczyć</button>
                   </a>
                 </div>
@@ -141,7 +212,7 @@
                 <div class="notReady">
                   <!-- 
                   <a href="/stronatestowa/project 1/proj1-skaczacy-napis.html"> 
-                    --> 
+                    -->
                     <button class="buttonNotReady" role="button">Naciśnij aby zobaczyć</button>
                   </a>
                 </div>
@@ -158,10 +229,11 @@
                   <a href="/stronatestowa/project 1/proj1-skaczacy-napis.html"> 
                     -->
                     <button class="buttonNotReady" role="button">Naciśnij aby zobaczyć</button>
-                 </a>
+                  </a>
                 </div>
             </div>
           </div>
+          
       </div>
 
 
@@ -177,11 +249,8 @@
         </h2>
       </section>
       
-    </div>
-
-  </main>
-    
-
-
-</body>
-</html>
+      
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+  </html>

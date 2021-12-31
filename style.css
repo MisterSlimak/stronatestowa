@@ -1,29 +1,66 @@
 :root{
+    --LightTextWidith: 5px;
+    --LightTextHeight: 5px;
+
+    --LightText2Widith: 5px;
+    --LightText2Height: 5px;
+
+    --LightText3Widith: 5px;
+    --LightText3Height: 5px;
+
+    --LightText4Widith: 5px;
+    --LightText4Height: 5px;
+
+    --LightText5Widith: 5px;
+    --LightText5Height: 5px;
+
+
+    --distanceLightText: 0px;
+    --distanceLightText2: 0px;
+    --distanceLightText3: 0px;
+    --distanceLightText4: 0px;
+    --distanceLightText5: 0px;
+    --perspective: 1000px;
+
+    /* tekst pisany */
     --typewriterSpeed: 3s;
     --typewriterCharacters: 22;
 }
-*, *::after, *::before {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgba(40, 40, 40, 1);
+    height: 300vh;
+    width: 100%;
+    z-index: 0;
+    
 }
 
 a{
     text-decoration: none;
 }
 
+*, *::after, *::before{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+  
 .navbar {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     width: 100%;
     height: 60px;
     background: rgba(0,0,0,0.7);
 }
-
+  
 .navbar ul {
     display: flex;
     list-style: none;
@@ -35,6 +72,7 @@ a{
     margin: 0 1rem;
     padding: 1rem;
     line-height: 1.6;
+    font-size: 16px;
 }
   
 .navbar ul li a {
@@ -43,7 +81,7 @@ a{
     color: #f4f4f4;
 }
   
-.navbar ul li a:hover {
+  .navbar ul li a:hover {
     color: skyblue;
 }
 
@@ -54,36 +92,471 @@ a{
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
+    
 }
+
 section {
-    width: 100vw;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     scroll-snap-align: start;
+    
 }
 
 #welcome-section {
+    /* position: absolute;
+    top: 0px;
+    left: 0px; */
     height: 100vh;
-    background-image: url("img/background0.jpg");
+    /* background-image: url("img/background0.jpg"); */
     flex-direction: column;
     align-items: flex-start;
     
 }
 
-.greetingbox {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 10vw;
-    align-items: center;
+#dark {
+    position: absolute;
+    height: 300vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.93);
+    z-index: 5;
+    left: 0vw;
+    top: 0px;
 }
 
+body.on #dark {
+    display: none;
+}
+
+/*
+body.on #dark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0vw;
+    top: 0px;
+    background:  
+        radial-gradient(
+            circle at 70vw 20vh,
+            rgba(0, 0, 0, 0.0),
+            rgba(0, 0, 0, 0.6) 25%,
+            rgba(0, 0, 0, 0.99) 100%
+        );
+    z-index: 100;
+} */
+
+
+#arrowContainer {
+    position: absolute;
+    bottom: 60px;
+    right: 160px;
+    height: 200px;
+    width: 200px;
+    z-index: 888;
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100px;
+    transform: rotateZ(-45deg);
+}
+
+.arrow .curveBox {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    height: 350px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.arrow .curve {
+	border: 5px solid whitesmoke;
+	border-color: transparent transparent transparent whitesmoke;
+	height: 360px;
+	width: 1200px;
+	border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+	position: absolute;
+	left: 38px;
+	top: 315px;
+}
+
+.arrow .point:before, .arrow .point:after {
+	border: 3px solid whitesmoke;
+	height: 25px;
+	content: "";
+	position: absolute;
+}
+
+.arrow .point:before {
+	top: -13px;
+	left: -10px;
+	transform:rotate(-74deg);
+	-webkit-transform:rotate(-74deg);
+  -moz-transform:rotate(-74deg);
+  -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+  top: -20px;
+	left: 2px;
+	transform:rotate(12deg);
+	-webkit-transform: rotate(12deg);
+  -moz-transform:rotate(12deg);
+  -ms-transform: rotate(12deg);
+}
+
+#arrowText {
+    position: absolute;
+    bottom: 280px;
+    left: -110px;
+    color: whitesmoke;
+    font-size: 2em;
+    width: 400px;
+
+}
+
+
+
+.light {
+    position: absolute;
+    left: calc(70vw - 25px);
+    top: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    animation-name: lightRotation;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    transform-origin: 25px -290px;
+}
+
+@keyframes lightRotation {
+    0% {    
+        transform: rotate(0deg);
+        animation-timing-function: ease-out; 
+    }
+    25% { 
+        transform: rotate(30deg);
+        animation-timing-function: ease-in;
+    }
+    50% { 
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: rotate(-30deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+
+.bulb {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background: white;
+   
+}
+
+.bulb::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 30% 30% 0 0;
+   
+}
+
+.wire {
+    position: absolute;
+    bottom: 80px;
+    left: 22.5px;
+    width: 5px;
+    height: 200px;
+    background: black;
+    z-index: -1;
+}
+
+body.on .light {
+    position: absolute;
+    left: calc(70vw - 25px);
+    top: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 
+        0 0 100px rgba(255, 255, 255, 1),
+        0 0 150px rgba(255, 255, 255, 1),
+        0 0 200px rgba(255, 255, 255, 1),
+        0 0 300px rgba(255, 255, 255, 1);
+    z-index: 10000;
+}
+
+
+
+
+
+.lightBackground {
+    position: absolute;
+    width: 100%;
+    height: 150vh;
+    left: 0vw;
+    top: -180px;
+    overflow: hidden;
+}
+
+.lightBackground::after {
+    content: "";
+    position: absolute;
+    width: 4000px;
+    height: 3000px;
+    left: -1000px;
+    top: -1000px;
+    background:  
+        radial-gradient(
+            circle at calc(70vw + 1000px) 1300px,
+            rgba(255,255,255,0.25),
+            rgba(0,0,0,0.6) 30%,
+            rgba(0,0,0,0.85) 60%,
+            rgba(0,0,0,0.95) 100%
+        );
+    z-index: 5;
+    animation-name: lightRotation;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    transform-origin: calc(70vw - 25px + 1000px) 1000px;
+}
+
+/* nadpisywanie pozycji z JS */
+body.off .lightBackground {
+    top: -10080px !important; 
+}
+
+.switch {
+    position: absolute;
+    bottom: 10vh;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(#eee, #ccc, #eee);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.switchClick {
+    position: absolute;
+    bottom: calc(10vh + 20px);
+    right: calc(20px + 20px);
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.switch .button {
+    position: relative;
+    width: 25px;
+    height: 40px;
+    background: linear-gradient(#777, #fff, #777);
+    border: 2px solid #000;
+    cursor: pointer;
+    border-radius: 6px;
+
+}
+
+.switch .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient( #fff, #fff);
+    border-radius: 4px;
+    box-sizing: content-box;
+}
+
+.on .switch .button::before {
+    top: 15%;
+}
+
+
+.text {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    z-index: 1;
+    color: yellow;
+}
+
+
+.textShadow {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    color: black;
+    top: -5000px;
+    animation-name: shadowRotation;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 0px;
+    font-weight: 900;
+    font-size: 0.98em;
+}
+
+
+@keyframes shadowRotation {
+    0% {    
+        transform: translate(0%, 0%);
+        animation-timing-function: ease-out; 
+    }
+    25% { 
+        transform: translate(7%, 5%);
+        animation-timing-function: ease-in;
+    }
+    50% { 
+        transform: translate(0%, 0%);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: translate(-7%, 5%);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+body.on #text1Shadow {
+    position: absolute;
+    left: calc(var(--LightTextWidith)/10);
+    top: calc(var(--LightTextHeight)/5);
+    filter: blur(4px);
+    perspective-origin: calc(var(--LightTextWidith)/10) calc(var(--LightTextHeight)/5);
+    
+    transform: 
+        perspective(var(--perspective))
+        translateZ(calc(var(--distanceLightText)/3));
+}
+
+#text2 {
+    top: 75vh;
+    left: 55vw;
+}
+
+body.on #text2Shadow {
+    position: absolute;
+    left: calc(var(--LightText2Widith)/10);
+    top: calc(var(--LightText2Height)/5);
+    filter: blur(4px);
+    perspective-origin: calc(var(--LightText2Widith)/10) calc(var(--LightText2Height)/5);
+
+    transform: 
+        perspective(var(--perspective))
+        translateZ(calc(var(--distanceLightText2)/3));
+}
+
+#text3 {
+    top: 40vh;
+    left: 80vw;
+}
+
+body.on #text3Shadow {
+    position: absolute;
+    left: calc(var(--LightText3Widith)/10);
+    top: calc(var(--LightText3Height)/5);
+    filter: blur(4px);
+    perspective-origin: calc(var(--LightText3Widith)/10) calc(var(--LightText3Height)/5);
+
+    transform: 
+        perspective(var(--perspective))
+        translateZ(calc(var(--distanceLightText3)/3));
+}
+/* 
+#box {
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    height: 50px;
+    width: 50px;
+    background: blue;
+    z-index: 4;
+    animation-name: exam;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+     animation-direction: alternate; 
+    transform-origin: 100px 0px;
+}
+
+@keyframes exam {
+    0% { transform: rotate(0deg)}
+    25% { transform: rotate(30deg)}
+    50% { transform: rotate(0deg)}
+    75% { transform: rotate(-30deg)}
+    100% { transform: rotate(0deg)}
+}
+}
+
+#boxClick{
+    cursor: pointer;
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    height: 50px;
+    width: 50px;
+    z-index: 1111;
+} */
+
+
+
+
 h1 {
+    position: absolute;
+    left: 10vw;
+    top: 500px;
+    
+
     font-family: 'Source Sans Pro', sans-serif;
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
-    position: relative;
+    position: absolute;
     font-family: "Source Code Pro", monospace;
     width: max-content;
     color: white;
@@ -101,7 +574,7 @@ h1::after {
 }
 
 h1::before {
-    background: black;
+    background: rgba(40, 40, 40, 1);
     -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
         animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
 }
@@ -113,17 +586,7 @@ h1::after {
           animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 950ms steps(var(--typewriterCharacters)) infinite;
 }
 
-.subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
-  font-weight: 400;
-  opacity: 0;
-  transform: translateY(3rem);
-  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-  padding: 20px 0;
-    
-}
+
 
 @-webkit-keyframes typewriter {
   to {
@@ -146,25 +609,112 @@ h1::after {
     background: transparent;
   }
 }
-@-webkit-keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-  
 
+  
+body.on #text4Shadow {
+    font-size: clamp(1rem, 3vw + 1rem - 3px, 4rem - 3px);
+    position: absolute;
+    left: calc(var(--LightText4Widith)/10);
+    top: calc(var(--LightText4Height)/5);
+    filter: blur(4px);
+    perspective-origin: calc(var(--LightText4Widith)/10) calc(var(--LightText4Height)/5);
+
+    transform: 
+        perspective(var(--perspective))
+        translateZ(calc(var(--distanceLightText4)/3));
+}
+body.off #text4Shadow {
+    top: -10080px 
+}
+
+#text4Shadow::before,
+#text4Shadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#text4Shadow:before {
+    background: rgba(40, 40, 40, 1);
+    -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+        animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+#text4Shadow:after {
+  width: 0.125em;
+  background: black;
+  -webkit-animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 950ms steps(var(--typewriterCharacters)) infinite;
+          animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 950ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(1rem, 1vw + 1.5rem, 2.5rem);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  padding: calc(3vw + 2rem) 10vw;
+    
+}
+
+#text5 {
+position: absolute;
+    left: 10vw;
+    top: 500px;
+}
+
+@-webkit-keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+body.on #text5Shadow {
+    
+    position: absolute;
+    left: calc(var(--LightText5Widith)/10);
+    top: calc(var(--LightText5Height)/5);
+    filter: blur(4px);
+    perspective-origin: calc(var(--LightText5Widith)/10) calc(var(--LightText5Height)/5);
+
+    transform: 
+        perspective(var(--perspective))
+        translateZ(calc(var(--distanceLightText5)/3));
+}
+
+#text5Shadow {
+
+    color: black;
+    font-size: clamp(1rem, 1vw + 1.5rem, 2.5rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+            animation: 
+                fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards,
+                shadowRotation 5s 0s infinite;
+    padding: calc(3vw + 2rem) 10vw;
+    transform-origin: 50% 0px;
+}
 
 
   
 #projects {
-    background-image: url("img/background9.jpg");
+    
+    /* background-image: url("img/background9.jpg"); */
     min-height: 100vh;
 }
 
@@ -182,6 +732,10 @@ h1::after {
     top: 100px;
 }
 
+.containerClick {
+    position: absolute;
+    top: calc(100vh + 100px);
+}
 
 @media (min-width: 500px) {
     .container {
@@ -219,6 +773,15 @@ h1::after {
     align-items: center;
     max-width: 250px;
     overflow: hidden;
+    z-index: 1000000;
+}
+
+.cardClick {
+    cursor: pointer;
+    z-index: 100000;
+}
+
+#cardClick1:hover {
     
 }
 
@@ -320,6 +883,10 @@ h1::after {
 
 .notready{
     color:red;
+}
+
+.inprogress {
+    color: yellow;
 }
 
 .card:hover .status {
@@ -444,5 +1011,6 @@ h1::after {
 
 #contact {
 height: 100vh;
-background-color: pink;
+/* background-color: pink; */
 }
+
