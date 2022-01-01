@@ -13,7 +13,7 @@ button.onclick = function() {
 
 // szerokości
 function js_OnScroll() {
-
+    
     // przsuwanie lampki i backgrounda
     var light = document.getElementById("light")
     var lightBackground = document.getElementById("lightBackground")
@@ -23,7 +23,7 @@ function js_OnScroll() {
             var offset = window.pageYOffset;
             scroll = offset;
 
-            if (scroll < 1600) {
+            if (scroll < 1500) {
                 light.style.top = (200 + scroll) + 'px'; // przesuwanie lampki względem Y //
                 lightBackground.style.top = (-80 + scroll) + 'px'; // przesuwanie backgrounda względem Y //
             }

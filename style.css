@@ -149,7 +149,7 @@ body.on #dark {
 
 
 #arrowContainer {
-    position: absolute;
+    position: fixed;
     bottom: 60px;
     right: 160px;
     height: 200px;
@@ -357,7 +357,7 @@ body.off .lightBackground {
 }
 
 .switch {
-    position: absolute;
+    position: fixed;
     bottom: 10vh;
     right: 20px;
     width: 80px;
@@ -372,7 +372,7 @@ body.off .lightBackground {
 }
 
 .switchClick {
-    position: absolute;
+    position: fixed;
     bottom: calc(10vh + 20px);
     right: calc(20px + 20px);
     width: 40px;
@@ -610,8 +610,17 @@ h1::after {
   }
 }
 
-  
+
+#text4Text5Toggle {
+    display: none;
+}
+
+body.on #text4Text5Toggle {
+    display: block;
+}
+
 body.on #text4Shadow {
+    width: max-content;
     font-size: clamp(1rem, 3vw + 1rem - 3px, 4rem - 3px);
     position: absolute;
     left: calc(var(--LightText4Widith)/10);
@@ -651,15 +660,15 @@ body.off #text4Shadow {
 }
 
 .subtitle {
-
-  color: rgba(255, 255, 255, 0.7);
-  font-size: clamp(1rem, 1vw + 1.5rem, 2.5rem);
-  font-weight: 400;
-  opacity: 0;
-  transform: translateY(3rem);
-  -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-          animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
-  padding: calc(3vw + 2rem) 10vw;
+    width: max-content;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(1rem, 1vw + 1.5rem, 2.5rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    -webkit-animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+            animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+    padding: calc(3vw + 2rem) 10vw;
     
 }
 
@@ -696,7 +705,7 @@ body.on #text5Shadow {
 }
 
 #text5Shadow {
-
+    width: max-content;
     color: black;
     font-size: clamp(1rem, 1vw + 1.5rem, 2.5rem);
     font-weight: 400;
@@ -760,6 +769,14 @@ body.on #text5Shadow {
     }
 }
 
+body.off .card {
+    filter: brightness(20%)
+}
+
+body.on .card {
+    filter: brightness(90%)
+}
+
 .card {
     height: 200px;
     width: 100%;
@@ -779,10 +796,6 @@ body.on #text5Shadow {
 .cardClick {
     cursor: pointer;
     z-index: 100000;
-}
-
-#cardClick1:hover {
-    
 }
 
 @media (min-width: 500px) {
