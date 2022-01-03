@@ -74,8 +74,9 @@ body {
     position: relative;
     margin: 1vh 0.5vw;
     height: max-content;
-    width: 10vw;
+    width: clamp(95px, 10vw, 10vw);
     border: 2px solid rgb(65, 65, 65);
+    
 }
 
 input {

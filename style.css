@@ -840,6 +840,9 @@ body.on .card {
 .b5 {
     background-image: url("img/proj5.png");
 }
+.b6 {
+    background-image: url("img/proj6.png");
+}
 
 .background::after {
     content: "";
