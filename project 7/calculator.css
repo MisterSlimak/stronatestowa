@@ -1,0 +1,274 @@
+body {
+    background: rgb(251,255,91);
+    background: linear-gradient(142deg, rgba(251,255,91,1) 0%, rgba(255,250,68,1) 61%, rgba(255,243,0,1) 100%);
+    padding: 60px 0 0 0;
+    height: 100vh;
+}
+
+
+*, *::after, *::before{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+  
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+  
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+    line-height: 1.6;
+    font-size: 16px;
+}
+  
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+  
+  .navbar ul li a:hover {
+    color: skyblue;
+}
+
+.calculatorBox {
+    display: flex;
+    
+}
+
+.calculator {
+    position: relative;
+    width: 20vw;
+    height: 50vh;
+    min-width: 276px;
+    background-color: #4e3600;
+    left: 40vw;
+    top: 20vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    z-index: 2;
+    padding: 10px;
+    
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    background-color: #4e3600;
+    grid-area: 1 / 1 / 2 / 5;
+    padding: 5px 5px 20px 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    color: white;
+}
+
+.history2, .history1 {
+    padding: 2px 0px;
+    font-size: 0.9em;
+}
+
+.screenBottom {
+    padding: 10px 0 0 0;
+}
+
+.sign {
+    padding: 0 2px;
+}
+
+.screenBottom {
+    display: flex;
+    
+}
+
+.button {
+    
+    background-color: #cdd113;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    min-width: 60px;
+    margin: 2px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.button:active {
+    background-color: #8c8f0d;
+}
+
+.calculator2 {
+    position: relative;
+    width: 10vw;
+    height: calc(50vh - 125px);
+    min-width: 152px;
+
+    background-color: #4e3600;
+    left: 20vw;
+    top: calc(20vh + 125px);
+
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 1;
+    padding: 10px;
+}
+
+
+
+body .advanced .calculator2{
+    left: 40vw;
+    animation: rotate1 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) ;
+}
+
+@keyframes rotate1 {
+    0% {
+      transform: rotateY(90deg);
+      transform-origin: left;
+    }
+    100% {
+      transform: rotateY(0deg);
+      transform-origin: left;
+    }
+}
+
+
+body .standard .calculator2{
+    
+    animation: rotate2 0.5s cubic-bezier(0.645, 0.045, 0.355, 1.000) ;
+}
+
+@keyframes rotate2 {
+    0% {
+        left: 40vw;
+      transform: rotateY(0deg);
+      transform-origin: left;
+    }
+    100% {
+        left: 40vw;
+      transform: rotateY(90deg);
+      transform-origin: left;
+    }
+}
+
+/* usuwa animacje przy ladowaniu strony */
+body.preload *{
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}
+
+
+
+#equal {
+    grid-area: 6 / 3 / 7 / 5;
+}
+#n1 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+#n2 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+#n3 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+#n4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+#n5 {
+    grid-area: 4 / 2 / 4 / 3;
+}
+#n6 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+#n7 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+#n8 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+#n9 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+#n0 {
+    grid-area: 6 / 2 / 7 / 3;
+}
+#dot {
+    grid-area: 6 / 1 / 7 / 2;
+}
+#plus {
+    grid-area: 5 / 4 / 6 / 5;
+}
+#minus {
+    grid-area: 4 / 4 / 5 / 5;
+}
+#multiple {
+    grid-area: 3 / 4 / 4 / 5;
+}
+#devide {
+    grid-area: 2 / 4 / 3 / 5;
+}
+#clear {
+    grid-area: 2 / 2 / 3 / 3;
+}
+#delete {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+#transform {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#clearHistory {
+    grid-area: 5 / 1 / 6 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.toDo {
+    position: absolute;
+    width: 17vw;
+    height: auto;
+    background-color: green;
+    left: 5vw;
+    top: 10vh;
+    padding: 15px;
+    border-radius: 20px;
+    min-width: 200px;
+}
+
+.toDo p {
+    margin: 5px;
+    font-size: 1.3rem;
+}
+
+.toDo li {
+    color: black;
+    margin: 5px 0 0 20px;
+}
+

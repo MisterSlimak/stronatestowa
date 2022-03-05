@@ -53,6 +53,7 @@ function game1() {
     document.querySelector(".game2").style.display = "none";
     document.querySelector(".game3").style.display = "none";
     document.querySelector(".game4").style.display = "none";
+    game1StartFunction();
 }
 
 function game2() {

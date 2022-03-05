@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body class="preload"> 
+    
+  <nav class="navbar">
+    <ul>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#welcome-section">Strona główna</a></li>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#projects">Projekty</a></li>
+      <li><a href="https://misterslimak.github.io/stronatestowa/#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+  
+  <div class="calculatorBox standard">
+    <div class="calculator">
+      <div class="screen">
+        <div class="history2"></div>
+        <div class="history1"></div>
+        <div class="screenBottom">
+          <div class="previusNumber"></div>
+          <div class="sign"></div>
+          <div class="curentNumber"></div>
+        </div>
+      </div>
+      
+      <div class="button" id="clear">C</div>
+      <div class="button mathSign" id="multiple">*</div>
+      <div class="button mathSign" id="devide">/</div>
+      <div class="button mathSign" id="plus">+</div>
+      <div class="button mathSign" id="minus">-</div>
+      <div class="button " id="equal">=</div>
+      <div class="button numbers" id="dot">.</div>
+      <div class="button" id="delete">del</div>
+      <div class="button" id="transform" onclick="advanced()">
+        <p>Change</p>
+        <p>Mode</p>
+      </div>
+      <div class="button numbers" id="n1">1</div>
+      <div class="button numbers" id="n2">2</div>
+      <div class="button numbers" id="n3">3</div>
+      <div class="button numbers" id="n4">4</div>
+      <div class="button numbers" id="n5">5</div>
+      <div class="button numbers" id="n6">6</div>
+      <div class="button numbers" id="n7">7</div>
+      <div class="button numbers" id="n8">8</div>
+      <div class="button numbers" id="n9">9</div>
+      <div class="button numbers" id="n0">0</div> 
+    </div>
+    <div class="calculator2">
+      <div class="button" id="x^2">x^2</div>
+      <div class="button" id="1/x">1/x</div>
+      <div class="button" id="x^y">x^y</div>
+      <div class="button" id="10^x">10^x</div>
+
+      <div class="button numbers" id="pi">pi</div>
+      <div class="button numbers" id="e">e</div>
+      <div class="button" id="|x|">|x|</div>
+      <div class="button" id="ln">ln</div>
+
+      <div class="button" id="clearHistory">
+        <p>Clear</p>
+        <p>History</p>
+      </div>
+    </div>
+  </div> 
+
+  <div class="toDo">
+    <p>ToDo list</p>
+    <li>Zaimplementować błąd zaokrąglenia</li>
+    <li>Zaimplementować ilość liczb po przecinku</li>
+    <li>Przycisk "x^2" JS</li>
+    <li>Przycisk "1/x" JS</li>
+    <li>Przycisk "x^y" JS</li>
+    <li>Przycisk "10^x" JS</li>
+    <li>Przycisk "pi" JS</li>
+    <li>Przycisk "e" JS</li>
+    <li>Przycisk "|x|" JS</li>
+    <li>Przycisk "ln" JS</li>
+    <li>Bug "wykonać działanie" -> "del" -> "operator" -> "del" -> "operator" </li>
+    <li>Dodać "+/-" przycisk</li>
+  </div>
+<script src="script.js"></script>
+
+</body>
+</html>

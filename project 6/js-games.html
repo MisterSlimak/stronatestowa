@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
-
+    
     <link rel="stylesheet" href="js-games.css">
+    <link rel="stylesheet" href="game1.css">
+    <link rel="stylesheet" href="game2/trex.css">
 </head>
 <body>
     
@@ -36,13 +38,13 @@
     <label>
       <input type="radio" name="x" id="game1Check" onclick="game1()" >
       <h1 id="game1Name">
-        Game 1 ssssssss sssssssss
+        Game 1
       </h1>
     </label>
     <label>
       <input type="radio" name="x" id="game2Check" onclick="game2()" >
       <h1 id="game2Name">
-        Game 2
+        T-Diss game
       </h1>
     </label>
     <label>
@@ -61,11 +63,14 @@
 
   
   <div class="gameContainer">
-    game
-    <div class="game1">
 
+    <div class="game1">
+      <div id="character1"></div>
     </div>
+    
     <div class="game2">
+      <div id="character2"></div>
+      <div id="object2"></div>
       
     </div>
     <div class="game3">
@@ -78,7 +83,9 @@
   </div>
 
 
-
+  <script src="game2\trex.js"></script>
+  <script src="js-game1.js"></script>
   <script src="js-games.js"></script>
+  
 </body>
 </html>
