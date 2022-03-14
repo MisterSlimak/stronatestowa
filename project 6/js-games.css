@@ -1,82 +1,38 @@
 body {
-    background: rgb(15, 15, 15);
-    padding: calc(60px + clamp(25px, 2.5vw, 2.5vw)) 0 0 0;
-    height: calc(100% - 60px - clamp(25px, 2.5vw, 2.5vw) - 25px - 50vh);
-}
-
-*, *::after, *::before{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-  
-body {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    width: 100vw;
+    /* background: rgb(15, 15, 15); */
+    background: blue;
+    padding: 60px 0 0 0;
     height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content min-content auto min-content min-content min-content auto min-content;
+    grid-template-rows: min-content min-content min-content min-content auto min-content;
+
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background: rgba(0,0,0,0.7);
-}
-  
-.navbar ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: center;
-}
-  
-.navbar ul li {
-    margin: 0 1rem;
-    padding: 1rem;
-    line-height: 1.6;
-    font-size: 16px;
-}
-  
-.navbar ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #f4f4f4;
-}
-  
-  .navbar ul li a:hover {
-    color: skyblue;
-}
 
+
+.leftNavbar {
+    height: max-content;
+    width: clamp(95px, 10vw, 10vw);
+
+    margin: 1vh 0.5vw;
+    border: 2px solid rgb(65, 65, 65);
+
+    background: rgb(139, 139, 139);
+}
 
 .gameTitle {
-    color: whitesmoke;
-    position: absolute;
-    left: 0vw;
-    top: calc(60px );
+    width: max-content;
     height: max-content;
-    width: 100%;
-    text-align: center;
+    
     margin: 1vh 0;
+    
+    color: whitesmoke;
+    text-align: center;
     font-size: clamp(25px, 2.5vw, 2.5vw);
     text-transform: uppercase;
     line-height: 0.8;
-}
-
-.leftNavbar {
-    background: rgb(139, 139, 139);
-    position: relative;
-    margin: 1vh 0.5vw;
-    height: max-content;
-    width: clamp(95px, 10vw, 10vw);
-    border: 2px solid rgb(65, 65, 65);
-    
 }
 
 input {
@@ -101,14 +57,12 @@ input {
     
 }
 
+
 .gameContainer {
     background: green;
-    position: relative;
-    margin: 1vh 0.5vw;
-    height: 86vh;
-    width: 100%;
-    border: 2px solid rgb(65, 65, 65);
+    height: 100%;
 }
+
 
 .game1 {
     display: none;
@@ -135,3 +89,113 @@ input {
     width: 100%;
 }
 
+
+.leftNavbar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    
+}
+
+.gameContainer {
+    grid-column: 3 / 8;
+    grid-row: 3 / 6;
+    
+}
+
+.borderRight {
+    grid-row: 3 / 6;
+    grid-column: 8 / 9;
+    background-color: red;
+}
+
+.borderBottom {
+    grid-row: 6 / 7;
+    grid-column: 3 / 8;
+    /* background-color: yellow; */
+}
+
+.bottomWhite {
+    position: relative;
+    height: 3px;
+    width: calc(100% - 240px);
+    left: 0px;
+    top: 0px;
+
+
+    background-color: white;
+}
+
+.bottomWhite::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 170px;
+    left: 100%;
+    top: -13px;
+    transform: translateX(12px);
+
+    background-color: blue;
+}
+
+.bottomWhite::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    left: 100%;
+    top: -5.5px;
+    transform: translateX(-4px) translateY(-1px) rotate(-45deg) ;
+
+    background-color: yellow;
+}
+
+.bottomWhite2 {
+    position: relative;
+    height: 3px;
+    width: 58px;
+    left: 100%;
+    top: -37px;
+    transform: translateX(172px) translateY(3px) rotate(-45deg) ;
+
+    background-color: white;
+}
+
+.borderRight {
+    position: relative;
+    height: calc(100% - 150px);
+    width: 3px;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+}
+
+.borderRight::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 3px;
+    bottom: -25px;
+    left: -10px;
+    transform: translateX(0px) translateY(0px) rotate(45deg) ;
+    background-color: red;
+}
+
+.borderRight::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 3px;
+    bottom: -99px;
+    left: -20px;
+    
+    background-color: yellow;
+}
+
+.bottomBlue {
+    position: relative;
+    height: 3px;
+
+    width: 100%;
+    top: 5px;
+    background-color: #00F9F1;
+}

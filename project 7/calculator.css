@@ -116,6 +116,32 @@ body {
     font-weight: 700;
 }
 
+/* .notReady {
+   
+}
+
+.notReady::before {
+    content: '';
+    position: relative;
+    left: 0px;
+    top: 10px;
+    width: 70px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: black;
+}
+
+.notReady::after {
+    content: '';
+    position: relative;
+    left: 0px;
+    top: 100px;
+    width: 70px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: black;
+} */
+
 .button:active {
     background-color: #8c8f0d;
 }
@@ -271,4 +297,3 @@ body.preload *{
     color: black;
     margin: 5px 0 0 20px;
 }
-

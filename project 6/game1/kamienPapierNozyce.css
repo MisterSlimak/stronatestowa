@@ -1,0 +1,57 @@
+.game1 {
+    font-size: clamp(15px, 1.75vw, 50px);;
+}
+
+
+.display {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, auto );
+    width: 100%;
+    
+    padding: 20vh 10vw 0 10vw;
+    column-gap: 1vw;
+    row-gap: 1vh;
+}
+
+.itemLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.itemRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.choice {
+    background-color: red;
+}
+
+.result {
+    background-color: blue;
+}
+
+.score {
+    background-color: yellow;
+    font-size: clamp(25px, 3.5vw, 60px);
+}
+
+
+.buttonContainer {
+    width: 100%;
+    position: relative;
+    padding: 20vh 15vw 0 15vw;
+    margin: 0 3vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game1Button {
+    background-color: red;
+    cursor: pointer;
+    font-size: clamp(25px, 2.5vw, 60px);
+    
+}
